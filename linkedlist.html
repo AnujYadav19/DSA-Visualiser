@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singly Linked List Visualizer | DSA Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .ll-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .ll-controls input {
+            font-size: 1.05rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 0.5rem;
+            border: 1.5px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            transition: border 0.2s;
+            width: 120px;
+        }
+
+        .ll-controls input:focus {
+            border: 1.5px solid var(--primary);
+            outline: none;
+        }
+
+        .ll-controls button {
+            font-size: 1.05rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 0.5rem;
+            border: none;
+            background: var(--accent);
+            color: #23283a;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .ll-controls button:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .ll-visualization-area {
+            min-height: 120px;
+            background: var(--bg);
+            border-radius: 0.7rem;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.2rem;
+            padding: 1.2rem 0.7rem;
+            margin-bottom: 0.7rem;
+            transition: border 0.3s;
+            overflow-x: auto;
+        }
+
+        .ll-node {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: var(--card-bg);
+            border: 2px solid var(--primary);
+            border-radius: 0.7rem;
+            min-width: 70px;
+            min-height: 60px;
+            padding: 0.7rem 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            position: relative;
+            transition: background 0.3s, border 0.3s, color 0.3s;
+        }
+
+        .ll-node.head {
+            border: 2.5px solid var(--accent);
+            background: var(--accent);
+            color: #23283a;
+        }
+
+        .ll-arrow {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 0 0.3rem;
+            user-select: none;
+        }
+
+        .ll-head-pointer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0.7rem;
+        }
+
+        .ll-head-label {
+            font-size: 1.05rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        @media (max-width: 700px) {
+            .ll-node {
+                min-width: 48px;
+                min-height: 38px;
+                font-size: 1.02rem;
+                padding: 0.4rem 0.7rem;
+            }
+
+            .ll-arrow {
+                font-size: 1.3rem;
+            }
+        }
+
+        .sorting-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">← Back</a>
+    <div class="sorting-container" style="max-width:900px;margin:2.5rem auto 0 auto;">
+        <div class="sorting-title">Singly Linked List Visualizer</div>
+        <div class="theory-and-complexity-container">
+            <div class="sorting-theory" id="theory">
+                <b>Singly Linked List:</b> A linear data structure where each element (node) points to the next.
+                Supports efficient insertions and deletions at any position.<br><br>
+                <span style="color:var(--accent)">Visualize insertions and deletions at any index. The <b>head</b>
+                    pointer always points to the first node.</span>
+            </div>
+        </div>
+        <div class="ll-controls">
+            <input type="number" id="llValue" placeholder="Value" />
+            <input type="number" id="llIndex" placeholder="Index" min="0" />
+            <button id="llInsertBtn">Insert</button>
+            <button id="llDeleteBtn">Delete</button>
+        </div>
+        <div class="ll-visualization-area" id="llVisualization"></div>
+        <div class="step-explanation enhanced" id="llStepExplanation"></div>
+    </div>
+    <script src="linkedlist.js"></script>
+    <script>
+        // Ensure dark/light mode is consistent with homepage
+        const userTheme = localStorage.getItem('theme');
+        if (userTheme === 'dark' || (userTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="theme-toggle">
+    <button id="toggleTheme" aria-label="Toggle dark/light mode">
+      <span id="themeIcon">🌙</span>
+    </button>
+  </div>
+  <header>
+    <h1 class="title">DSA Visualizer</h1>
+    <p class="subtitle">Explore and understand Data Structures visually</p>
+  </header>
+  <main>
+    <section class="dsa-categories">
+      <div class="category-box" data-category="linear">
+        <div class="category-header">1. Linear Data Structures</div>
+        <div class="category-content">
+          <div class="subcategory">
+            <div class="subcategory-title">1.1 Arrays</div>
+            <ul>
+              <li><a href="searching.html" class="ds-link">Searching (Linear Search, Binary Search)</a></li>
+              <li><a href="sorting.html" class="ds-link">Sorting (Bubble, Selection, Insertion, Merge, Quick, Heap)</a>
+              </li>
+              <li class="ds-link">Two Pointer Techniques</li>
+              <li class="ds-link">Sliding Window</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">1.2 Linked Lists</div>
+            <ul>
+              <li><a href="linkedlist.html" class="ds-link">Singly Linked List</a></li>
+              <li>Doubly Linked List</li>
+              <li>Circular Linked List</li>
+              <li>Algorithms
+                <ul>
+                  <li>Reversing</li>
+                  <li>Finding Middle</li>
+                  <li>Cycle Detection (Floyd's Algorithm)</li>
+                  <li>Merge Sort on Linked List</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">1.3 Stacks</div>
+            <ul>
+              <li>Applications:
+                <a href="stack_parenthesis.html" class="ds-link">Parenthesis Matching</a>, Expression Evaluation,
+                Backtracking
+              </li>
+              <li>Algorithms
+                <ul>
+                  <li>Infix to Postfix/Prefix Conversion</li>
+                  <li>Next Greater Element</li>
+                  <li>Stock Span Problem</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">1.4 Queues</div>
+            <ul>
+              <li><a href="queue_simple.html" class="ds-link">Simple Queue</a></li>
+              <li>Circular Queue</li>
+              <li>Deque (Double-Ended Queue)</li>
+              <li>Priority Queue</li>
+              <li>Applications: Scheduling, BFS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="category-box" data-category="hashing">
+        <div class="category-header">2. Hashing</div>
+        <div class="category-content">
+          <ul>
+            <li>Hash Tables / Hash Maps</li>
+            <li>Hash Sets</li>
+            <li>Open Addressing</li>
+            <li>Separate Chaining</li>
+            <li>Applications
+              <ul>
+                <li>Caching</li>
+                <li>Lookup Tables</li>
+                <li>Frequency Counting</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="category-box" data-category="hierarchical">
+        <div class="category-header">3. Hierarchical / Non-Linear Data Structures</div>
+        <div class="category-content">
+          <div class="subcategory">
+            <div class="subcategory-title">3.1 Trees</div>
+            <ul>
+              <li>Binary Tree</li>
+              <li>Binary Search Tree (BST)</li>
+              <li>AVL Tree</li>
+              <li>Red-Black Tree</li>
+              <li>Segment Tree</li>
+              <li>Fenwick Tree (Binary Indexed Tree)</li>
+              <li>Trie (Prefix Tree)</li>
+              <li>Algorithms
+                <ul>
+                  <li>Traversals (Inorder, Preorder, Postorder, Level Order)</li>
+                  <li>Search, Insert, Delete (BST)</li>
+                  <li>LCA (Lowest Common Ancestor)</li>
+                  <li>Diameter of Tree</li>
+                  <li>Tree DP (Subtree Problems)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">3.2 Graphs</div>
+            <ul>
+              <li>Representations
+                <ul>
+                  <li>Adjacency Matrix</li>
+                  <li>Adjacency List</li>
+                </ul>
+              </li>
+              <li>Traversal Algorithms
+                <ul>
+                  <li>BFS (Breadth-First Search)</li>
+                  <li>DFS (Depth-First Search)</li>
+                </ul>
+              </li>
+              <li>Shortest Path
+                <ul>
+                  <li>Dijkstra's Algorithm</li>
+                  <li>Bellman-Ford</li>
+                  <li>Floyd-Warshall</li>
+                  <li>A* Algorithm</li>
+                </ul>
+              </li>
+              <li>Minimum Spanning Tree
+                <ul>
+                  <li>Kruskal's Algorithm</li>
+                  <li>Prim's Algorithm</li>
+                </ul>
+              </li>
+              <li>Topological Sorting</li>
+              <li>Cycle Detection</li>
+              <li>Strongly Connected Components (Kosaraju's Algorithm)</li>
+              <li>Applications: Networking, Navigation, Social Networks</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">3.3 Heaps</div>
+            <ul>
+              <li>Min Heap</li>
+              <li>Max Heap</li>
+              <li>Heap Sort</li>
+              <li>Priority Queue Implementation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="category-box" data-category="advanced">
+        <div class="category-header">4. Advanced Data Structures</div>
+        <div class="category-content">
+          <ul>
+            <li>Disjoint Set (Union-Find)
+              <ul>
+                <li>Path Compression</li>
+                <li>Union by Rank</li>
+                <li>Applications: Kruskal's Algorithm, Network Connectivity</li>
+              </ul>
+            </li>
+            <li>Suffix Trees</li>
+            <li>Suffix Arrays</li>
+            <li>Bloom Filters</li>
+            <li>Skip Lists</li>
+            <li>LRU Cache</li>
+          </ul>
+        </div>
+      </div>
+      <div class="category-box" data-category="algorithms">
+        <div class="category-header">5. Algorithm Categories</div>
+        <div class="category-content">
+          <div class="subcategory">
+            <div class="subcategory-title">5.1 Sorting Algorithms</div>
+            <ul>
+              <li>Bubble, Selection, Insertion</li>
+              <li>Merge Sort</li>
+              <li>Quick Sort</li>
+              <li>Heap Sort</li>
+              <li>Counting Sort</li>
+              <li>Radix Sort</li>
+              <li>Bucket Sort</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.2 Searching Algorithms</div>
+            <ul>
+              <li>Linear Search</li>
+              <li>Binary Search (Iterative & Recursive)</li>
+              <li>Interpolation Search</li>
+              <li>Exponential Search</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.3 Divide & Conquer</div>
+            <ul>
+              <li>Merge Sort</li>
+              <li>Quick Sort</li>
+              <li>Binary Search</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.4 Greedy Algorithms</div>
+            <ul>
+              <li>Activity Selection</li>
+              <li>Huffman Encoding</li>
+              <li>Fractional Knapsack</li>
+              <li>Dijkstra's Algorithm</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.5 Dynamic Programming</div>
+            <ul>
+              <li>Knapsack Problems</li>
+              <li>Longest Common Subsequence (LCS)</li>
+              <li>Longest Increasing Subsequence (LIS)</li>
+              <li>Matrix Chain Multiplication</li>
+              <li>Coin Change Problem</li>
+              <li>DP on Trees</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.6 Backtracking</div>
+            <ul>
+              <li>N-Queens</li>
+              <li>Sudoku Solver</li>
+              <li>Hamiltonian Path</li>
+              <li>Subset Sum</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.7 Bit Manipulation</div>
+            <ul>
+              <li>Basic Bitwise Operations</li>
+              <li>Count Set Bits</li>
+              <li>Power of Two Check</li>
+              <li>XOR-based Algorithms (e.g., Missing Number)</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <div class="subcategory-title">5.8 Recursion & Recursion Tree</div>
+            <ul>
+              <li>Factorial, Fibonacci</li>
+              <li>Permutations & Combinations</li>
+              <li>Recursive Tree Visualizations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="category-box" data-category="geometry">
+        <div class="category-header">6. Computational Geometry</div>
+        <div class="category-content">
+          <ul>
+            <li>Convex Hull</li>
+            <li>Line Intersection</li>
+            <li>Closest Pair of Points</li>
+            <li>Polygon Area Calculation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="category-box" data-category="strings">
+        <div class="category-header">7. String Algorithms</div>
+        <div class="category-content">
+          <ul>
+            <li>Pattern Matching
+              <ul>
+                <li>KMP Algorithm</li>
+                <li>Rabin-Karp Algorithm</li>
+                <li>Z-Algorithm</li>
+                <li>Boyer-Moore Algorithm</li>
+              </ul>
+            </li>
+            <li>Trie-Based Problems</li>
+            <li>Suffix Arrays & LCP Arrays</li>
+            <li>Applications: Search Engines, DNA Sequencing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Made with <span class="love">❤️</span> for learners</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
