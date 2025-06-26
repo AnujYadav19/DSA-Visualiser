@@ -4,7 +4,7 @@ A web-based interactive visualizer to explore and understand **Data Structures a
 
 ## 🚀 Live Preview
 
-> _Coming Soon_ (Host on GitHub Pages / Vercel / Netlify and update here)
+> _Coming Soon_
 
 ---
 
